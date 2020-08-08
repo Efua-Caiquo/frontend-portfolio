@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>YEFA Company Limited</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://drcoconutghana.com/wp-content/uploads/2018/11/best-coconut-in-ghana.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px intro script;
+    line-height: 1.8;
+    color:#000000;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #800000;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #black;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color:#00755e;
+    color: #e3ff00;
+    padding: 100px 25px;
+    font-family: monotype corsiva;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #00755e;
+  }
+  .logo-small {
+    color: #e3ff00;
+    font-size: 50px;
+  }
+  .logo {
+    color: #e3ff00;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #e3ff00;
+  }
+  .carousel-indicators li {
+    border-color: #e3ff00;
+  }
+  .carousel-indicators li.active {
+    background-color: #e3ff00;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #e3ff00 !important;
+    background-color: #00755e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: powderblue !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #00755e;
+    color: #e3ff00;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #00755e;
+    z-index: 9999;
+    border: 0;
+    font-size: 18px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Monotype corsiva;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #e3ff00 !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #e3ff00 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #00755e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#MyPage"><img src="coco logo.jpg" width="10%" alt="YEFA LOGO"> </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">DEALS</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>YEFA COMPANY LIMITED : DULCET COCONUT & ITS EXTRACTS</h1> <br>
+  <p>Known throughout the tropical world as the "Tree of Life": the coconut tree is revered as a source nutrition, wellness and beauty.It is a tree like no other, capable of feeding us, hydrating us and refreshing our system.</p> 
+  <p>Your tasty coconut water and its other products at your doorstep.</p>
+
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About YEFA Company Limited</h2><br>
+      <p>All hail the almighty coconut. A complete ball of joy, goodness and a dollop of fun. We know it’s good for you, you know it too. <br>YEFA is an entrepreneural visionarian movement which was form in the year 2013 forecatsed to been in the foreseeable future to aid humanity to enjoy the tropical life with the versatility the coconut tree and its fruits.</p><br>
+      <p>Our coconut products celebrate all that’s awesome about our husky friend. We’ve been blending, drying, fermenting and grinding them since 2014.</p>
+
+      <br><button class="btn btn-default btn-danger">You are just a phone call away</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Core Values</h2><br>
+      <p><strong>MISSION:</strong> To operate an efficient and profitable company that provides consistently good returns to its customers and shareholders.Also, with the use of the latest production processes and state-of-the-art equipment, YEFA company has the ability to niche its deals based on specific products requirement.</p><br>
+      <p><strong>VISION:</strong> We aim to be the producer of choice for the coconut fruits and its related products.</p>Quality without compromise is the ultimate. <br>Fairness and truatworthy is unquestioned.
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>POWER</h4>
+      <p>Among other things, we’ve become known for our products made from coconut sap and dried coconut milk. We provide a fabulous range of coconut goodies, including coconut oils, coconut sugar, coconut flour, vegan coconut milk powder, sweet coconut nectar and a range of naturally fermented coconut vinegar and tangy coconut amino sauces. <br>This undoubtedly has been a source of motivation and power due to the versatility and the diversity of the coconut tree.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>Complements are unique and expensive. Therefore the company is keen in also making good use of the hard crust of the coconut in the production of other goodies to suppliment the insatiable needs humanity.</p><br> We love what we do.
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>TIMELINES</h4>
+      <p>We serve clients very effective and effecient by meeting all timelines in the specification of our clients. We also priortize our turn around time in order to be fecund.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>GREEN</h4>
+      <p>Tropical is the power of nature</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+      <p>Accredited and approved by the misitry of trade and industry as well as the food and drugs authority.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD AND SMART WORK</h4>
+      <p>Clients relation at heart coupled with modern technology propels the people function in YEFA to exudes their best at all times.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Deals</h2><br>
+  <h4>What we have produced</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="coconut-milk.jpg" alt="Coconut Milk" width="400" height="300">
+        <p><strong>Coconut Milk</strong></p>
+        <p>Yes, we produced it with uniqueness.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="cocnut fab.jpg" alt="Coconut Fabrics" width="400" height="300">
+        <p><strong>Coconut Fabrics</strong></p>
+        <p>We made it with beauty</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="cocwater.jpg" alt="Coconut Water" width="400" height="300">
+        <p><strong>Coconut Water</strong></p>
+        <p>Yes, we serve with unique branding and packaging</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Clients Obsession!!!</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is by far the best among the rest. I am so happy with the result!"<br><span>Kwesi Josuas, CEO of AnA Goup of Companies</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... SUPERFABULOUS!!"<br><span>Efua Simons, Customer Service Executive, Texiles Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Excellent Client Delivery"<br><span>Provost, Gee University College</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Affordable prices with better payments options. Choose a payment plan that works best for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>15</strong> coconut oil</p>
+          <p><strong>10</strong> coconut water</p>
+          <p><strong>1</strong> coconut fabrics</p>
+          <p><strong>2</strong> coconut shoes</p>
+          <p><strong>1 free</strong> coconut bag</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$35</h3>
+          <h4>per delivery:subject to specifications</h4>
+          <button class="btn btn-danger">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>25</strong> coconut oil</p>
+          <p><strong>15</strong> coconut water</p>
+          <p><strong>2</strong> coconut fabrics</p>
+          <p><strong>3</strong> coconut shoes</p>
+          <p><strong>1 free</strong> coconut bag</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$75</h3>
+          <h4>per delivery:subject to specifications</h4>
+          <button class="btn btn-danger">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Prestige</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>32</strong> coconut oil</p>
+          <p><strong>18</strong> coconut water</p>
+          <p><strong>4</strong> coconut fabrics</p>
+          <p><strong>4</strong> coconut shoes</p>
+          <p><strong>1 free</strong> coconut bag</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$102</h3>
+          <h4>per delivery:subject to specifications</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Our customer service executives are available for all your requests and any other enquiries needed. <br> You can also follow our social media handles :  <bf>ig@#yefagh & fb@yefaco.gh</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Sekondi, GHANA</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +233 242909203</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> ephualove@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+
+
+<p style="color: red;"> STAY SAFE! COVID 19 IS REAL!! OBSERVE ALL LAID DOWN PROTOCOLS!!!<br> WITH LOVE FROM YEFA</p>
+<br>
+
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
